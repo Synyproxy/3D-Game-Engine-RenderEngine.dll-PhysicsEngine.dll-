@@ -163,14 +163,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Component.h" />
     <ClInclude Include="include\CoreEngine.h" />
     <ClInclude Include="include\CoreEngineAPI.h" />
+    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\Input.h" />
+    <ClInclude Include="include\math\Vec2.h" />
+    <ClInclude Include="include\Transform.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CoreEngine.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="src\Input.cpp" />
+    <ClCompile Include="src\math\Vec2.cpp" />
+    <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
