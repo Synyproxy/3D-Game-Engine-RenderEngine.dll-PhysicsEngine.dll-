@@ -1,7 +1,5 @@
 #pragma once
 
-#include <math/Vec2.h>
-
 namespace CoreEngineNS
 {
 	class Input
@@ -22,9 +20,9 @@ namespace CoreEngineNS
 		static GLfloat m_yOffset;
 
 		//Keyboard
-		static Vec2 m_movementDirection;
-		static Vec2 m_vertical;
-		static Vec2 m_horizontal;
+		static glm::vec2 m_movementDirection;
+		static glm::vec2 m_vertical;
+		static glm::vec2 m_horizontal;
 
 	public:
 		Input();
@@ -42,7 +40,7 @@ namespace CoreEngineNS
 		static float GetYOffset();
 		static float MouseX();
 		static float MouseY();
-		static Vec2 GetMovementDirection();
+		static glm::vec2 GetMovementDirection();
 
 		static void Reset();
 

@@ -15,9 +15,9 @@ GLfloat Input::m_lastY = 0;
 GLfloat Input::m_xOffset = 0;
 GLfloat Input::m_yOffset = 0;
 
-Vec2 Input::m_movementDirection = Vec2(0, 0);
-Vec2 Input::m_vertical = Vec2(0, 0);
-Vec2 Input::m_horizontal = Vec2(0, 0);
+glm::vec2 Input::m_movementDirection = glm::vec2(0, 0);
+glm::vec2 Input::m_vertical = glm::vec2(0, 0);
+glm::vec2 Input::m_horizontal = glm::vec2(0, 0);
 
 CoreEngineNS::Input::Input()
 {
@@ -37,40 +37,40 @@ void Input::KeyCallBack(GLFWwindow* p_window, int p_key, int p_scanCode, int p_a
 			m_shouldClose = true;	
 
 		if (p_key == GLFW_KEY_W)
-			m_vertical.Y(-1);
+			m_vertical.y = -1;
 			
 
 		if (p_key == GLFW_KEY_S)
-			m_vertical.Y(1);
+			m_vertical.y = 1;
 
 		if (p_key == GLFW_KEY_A)
-			m_horizontal.X(-1);
+			m_horizontal.x = -1;
 
 		if (p_key == GLFW_KEY_D)
-			m_horizontal.X(1);
+			m_horizontal.x = 1;
 	}
 
 	if (p_action == GLFW_RELEASE)
 	{
 		if (p_key == GLFW_KEY_W)
-			m_vertical.Y(0);
+			m_vertical.y = 0;
 
 		if (p_key == GLFW_KEY_S)
-			m_vertical.Y(0);
+			m_vertical.y = 0;
 
 		if (p_key == GLFW_KEY_A)
-			m_horizontal.X(0);
+			m_horizontal.x =0;
 
 		if (p_key == GLFW_KEY_D)
-			m_horizontal.X(0);
+			m_horizontal.x = 0;
 	}
 
 	m_movementDirection = m_vertical + m_horizontal;
 }
 
-Vec2 Input::GetMovementDirection()
+glm::vec2 Input::GetMovementDirection()
 {
-	return m_movementDirection.Normalize();
+	return glm::normalize(m_movementDirection);
 }
 
 void Input::Reset()

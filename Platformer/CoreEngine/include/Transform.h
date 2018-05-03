@@ -1,6 +1,7 @@
 #pragma once
 
-#include <math/Vec2.h>
+#include "stdafx.h"
+
 #include <Component.h>
 
 namespace CoreEngineNS
@@ -8,7 +9,8 @@ namespace CoreEngineNS
 	class Transform : public Component
 	{
 	private:
-		Vec2 m_position;
+		glm::vec3 m_position;
+		glm::vec3 m_scale;
 
 	public:
 		Transform();
@@ -18,8 +20,11 @@ namespace CoreEngineNS
 		void Update() override;
 		void Draw() override;
 
-		const Vec2& GetPosition() const;
-		void SetPosition(const Vec2& p_position);
+		const glm::vec3& GetPosition() const;
+		const glm::vec3& GetScale() const;
+
+		void SetPosition(const glm::vec3& p_position);
+		void SetScale(const glm::vec3& p_scale);
 	};
 
 }

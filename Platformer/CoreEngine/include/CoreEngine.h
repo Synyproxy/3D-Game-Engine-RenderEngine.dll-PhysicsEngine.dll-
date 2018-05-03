@@ -5,6 +5,7 @@
 #include <Input.h>
 #include <GameObject.h>
 #include <Transform.h>
+#include <Scene.h>
 
 using namespace RenderEngineNS;
 
@@ -14,6 +15,7 @@ namespace CoreEngineNS
 	{
 	private:
 		std::unique_ptr<RenderEngine> m_renderEngine;
+		Scene m_scene;
 		bool m_isRunning;
 
 	public:
