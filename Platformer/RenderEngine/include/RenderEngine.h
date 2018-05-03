@@ -12,6 +12,7 @@ namespace RenderEngineNS
 		bool m_isRunning;
 		int m_width;
 		int m_height;
+	
 
 	public:
 		RenderEngine();
