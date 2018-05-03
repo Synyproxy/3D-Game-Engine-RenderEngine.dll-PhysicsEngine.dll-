@@ -20,33 +20,33 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E65E0D6C-CF35-473F-AA9E-D33F9C029862}</ProjectGuid>
+    <ProjectGuid>{410EBEE8-693B-499B-BACA-86AE84869B46}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Console</RootNamespace>
+    <RootNamespace>CoreEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -72,63 +72,57 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(OutDir)x$(PlatformArchitecture);$(SolutionDir)x$(PlatformArchitecture)\Debug;$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(OutDir)x$(PlatformArchitecture);$(SolutionDir)x$(PlatformArchitecture)\Debug;$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(OutDir)x$(PlatformArchitecture);$(SolutionDir)x$(PlatformArchitecture)\Debug;$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN64\include;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(OutDir)x$(PlatformArchitecture);$(SolutionDir)x$(PlatformArchitecture)\Debug;$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COREENGINE_EXPORTS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>CoreEngine.lib;RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COREENGINE_EXPORTS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>CoreEngine.lib;RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -137,20 +131,17 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COREENGINE_EXPORTS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>CoreEngine.lib;RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -159,27 +150,27 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>COREENGINE_EXPORTS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>CoreEngine.lib;RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>RenderEngine.lib;glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\CoreEngine.h" />
+    <ClInclude Include="include\CoreEngineAPI.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Console.cpp" />
+    <ClCompile Include="src\CoreEngine.cpp" />
+    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -188,9 +179,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CoreEngine\CoreEngine.vcxproj">
-      <Project>{410ebee8-693b-499b-baca-86ae84869b46}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\RenderEngine\RenderEngine.vcxproj">
       <Project>{9e5f9de8-573c-4372-95b8-e4a01a013aaa}</Project>
     </ProjectReference>
