@@ -8,9 +8,11 @@ Model::Model(const std::string& p_filePath)
 {
 	LoadModel(p_filePath);
 }
+//m_renderEngine->Render(m_model, gameObject->GetComponent<MeshRenderer>().GetMesh, gameObject->GetComponent<Transform>().GetPosition);
+
 
 Model::Model(const Model& p_other) : m_meshes(p_other.m_meshes),
-m_directory(p_other.m_directory) {}
+m_directory(p_other.m_directory){}
 
 Model::Model(Model&& p_other) noexcept : m_meshes(std::move(p_other.m_meshes)),
 m_directory(std::move(p_other.m_directory)) {}

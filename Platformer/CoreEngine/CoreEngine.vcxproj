@@ -168,6 +168,7 @@
     <ClInclude Include="include\CoreEngineAPI.h" />
     <ClInclude Include="include\GameObject.h" />
     <ClInclude Include="include\Input.h" />
+    <ClInclude Include="include\MeshRenderer.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\Scene.h" />
     <ClInclude Include="include\Transform.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="src\CoreEngine.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="src\Input.cpp" />
+    <ClCompile Include="src\MeshRenderer.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\Transform.cpp" />

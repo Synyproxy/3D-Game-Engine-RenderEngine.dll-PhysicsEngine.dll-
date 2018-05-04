@@ -6,6 +6,7 @@
 #include <GameObject.h>
 #include <Transform.h>
 #include <Scene.h>
+#include <ResourceManager.h>
 
 using namespace RenderEngineNS;
 
@@ -17,8 +18,8 @@ namespace CoreEngineNS
 		std::unique_ptr<RenderEngine> m_renderEngine;
 		Scene m_scene;
 		bool m_isRunning;
-		Model* m_model;
 		Shader* m_shader;
+		ResourceManager m_resManager;
 
 	public:
 		CoreEngine();

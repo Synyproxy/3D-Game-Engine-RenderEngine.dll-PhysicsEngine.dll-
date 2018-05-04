@@ -26,7 +26,7 @@ namespace RenderEngineNS
 
 		void SetupWindow(const int& p_width, const int& p_height);
 		void Update();
-		void Render(Model* p_model, Shader* p_shader) const;
+		void Render(Model* p_model, Shader* p_shader, const glm::vec3& p_position) const;
 		Model* LoadModel(const std::string& p_filePath);
 		Shader* LoadShader(const std::string& p_vertexShader, const std::string& p_fragmentShader);
 
