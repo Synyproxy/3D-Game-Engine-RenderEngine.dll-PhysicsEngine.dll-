@@ -9,23 +9,24 @@ namespace RenderEngineNS
 {
 	class Mesh
 	{
-	public:
+	private:
+		// OPENGL BUFFERS
+		unsigned int m_vao, m_vbo, m_ebo;
 
+		// MESH DATA
 		std::vector<Vertex> m_vertices;
-		std::vector<GLuint> m_indices;
+		std::vector<unsigned int> m_indices;
 		std::vector<Texture> m_textures;
 
-		Mesh(std::vector<Vertex> p_vertices, std::vector<GLuint> p_indices, std::vector<Texture> p_textures);
-		~Mesh();
-
-		void Draw(Shader* p_shader);//Needs Shader
-
-	private:
-
-		GLuint VBO;
-		GLuint VAO;
-		GLuint EBO;
+	public:
+		Mesh() = default;
+		explicit Mesh(const std::vector<Vertex>& p_vertices, const std::vector<unsigned int>& p_indices, const std::vector<Texture>& p_textures);
+		~Mesh() = default;
 
 		void Setup();
+		void Draw(Shader& p_shader);
+
+		void Bind() const;
+		void Unbind() const;
 	};
 }

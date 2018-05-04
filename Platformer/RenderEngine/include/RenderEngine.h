@@ -2,6 +2,8 @@
 
 #include "RenderEngineAPI.h"
 #include <Window.h>
+#include "Model.h"
+#include "Camera.h"
 
 namespace RenderEngineNS
 {
@@ -12,7 +14,11 @@ namespace RenderEngineNS
 		bool m_isRunning;
 		int m_width;
 		int m_height;
-	
+		float m_time;
+
+		Shader* m_shader;
+		Model* m_model;
+		Camera* m_camera;
 
 	public:
 		RenderEngine();
@@ -20,6 +26,8 @@ namespace RenderEngineNS
 
 		void SetupWindow(const int& p_width, const int& p_height);
 		void Update();
+		void Render(Model* p_model, Shader* p_shader) const;
+		void Clear() const;
 
 		bool IsRunning();
 

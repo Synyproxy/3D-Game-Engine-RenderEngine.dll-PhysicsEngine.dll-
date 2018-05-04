@@ -7,13 +7,28 @@ namespace RenderEngineNS
 	class Shader
 	{
 	private:
-		GLuint m_program;
+		std::string m_filePathVertex;
+		std::string m_filePathFragment;
+		unsigned int m_rendererID;
+
+		std::unordered_map<std::string, int> m_uniformLocationCache;
 
 	public:
+		Shader(const std::string& vertexShader, const std::string& fragmentShader);
+		~Shader();
 
-		Shader(const GLchar* vertexPath, const GLchar* fragmentPath);
-		~Shader() = default;
+		void Bind() const;
+		void Unbind() const;
 
-		GLuint GetProgram() const;
+		void SetUniform1i(const std::string& name, int value);
+		void SetUniform4f(const std::string& name, float v0, float v1, float v2, float v3);
+		void SetUniformMat4f(const std::string& p_name, const glm::mat4& p_mat);
+
+		inline unsigned int GetRendererID() const { return m_rendererID; }
+
+	private:
+		int GetUniformLocation(const std::string& name);
+		std::string Parse(const std::string& filePath) const;
+		int Compile(unsigned, const std::string& source) const;
 	};
 }

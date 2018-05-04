@@ -72,27 +72,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN$(PlatformArchitecture)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN$(PlatformArchitecture)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN$(PlatformArchitecture)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\WIN$(PlatformArchitecture)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)dependencies\GLEW\include;$(SolutionDir)dependencies\GLFW\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\Soil\WIN$(PlatformArchitecture)\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
-    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\WIN64\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\dependencies\GLEW\lib\Release\Win64;$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,7 +106,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -125,7 +125,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -148,7 +148,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -171,7 +171,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3dll.lib;glew32.lib;opengl32.lib;SOIL.lib;assimp.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -179,6 +179,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Camera.h" />
     <ClInclude Include="include\Mesh.h" />
     <ClInclude Include="include\Model.h" />
     <ClInclude Include="include\RenderEngine.h" />
@@ -192,10 +193,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Model.cpp" />
     <ClCompile Include="src\RenderEngine.cpp" />
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\Window.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

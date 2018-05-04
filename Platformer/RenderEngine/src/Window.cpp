@@ -24,7 +24,7 @@ bool Window::Setup()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	m_window = glfwCreateWindow(m_width, m_height, "OpenGL Architecture", nullptr, nullptr);
+	m_window = glfwCreateWindow(m_width, m_height, "2WEngine", nullptr, nullptr);
 
 	int screenWidth, screenHeight;
 
