@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#include "Window.h"
+#include <Window.h>
 
 using namespace RenderEngineNS;
 

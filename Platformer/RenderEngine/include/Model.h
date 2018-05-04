@@ -1,12 +1,14 @@
 #pragma once
 
 #include "stdafx.h"
+
+#include <RenderEngineAPI.h>
 #include <Mesh.h>
 #include <Shader.h>
 
 namespace RenderEngineNS
 {
-	class Model
+	class RENDERENGINE_API Model
 	{
 	private:
 		std::vector<Mesh> m_meshes{};
@@ -29,6 +31,6 @@ namespace RenderEngineNS
 		void ProcessNode(aiNode* p_node, const aiScene* p_scene) noexcept;
 		Mesh ProcessMesh(aiMesh* p_mesh, const aiScene* p_scene) noexcept;
 		std::vector<Texture> LoadMaterialTextures(aiMaterial* p_mat, aiTextureType p_type,
-			std::string p_typeName) const noexcept;
+		std::string p_typeName) const noexcept;
 	};
 }

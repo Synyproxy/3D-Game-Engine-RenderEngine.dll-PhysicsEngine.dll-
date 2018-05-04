@@ -2,7 +2,6 @@
 
 #include "RenderEngineAPI.h"
 
-
 namespace RenderEngineNS
 {
 	class RENDERENGINE_API Window

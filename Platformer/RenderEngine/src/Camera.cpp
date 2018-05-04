@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
 #include <Camera.h>
-#include "glm/gtc/matrix_transform.hpp"
 
 using namespace RenderEngineNS;
 

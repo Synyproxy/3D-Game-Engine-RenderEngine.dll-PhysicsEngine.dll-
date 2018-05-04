@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RenderEngineAPI.h"
+#include <RenderEngineAPI.h>
 #include <Window.h>
-#include "Model.h"
-#include "Camera.h"
+#include <Model.h>
+#include <Camera.h>
 
 namespace RenderEngineNS
 {
@@ -16,8 +16,8 @@ namespace RenderEngineNS
 		int m_height;
 		float m_time;
 
-		Shader* m_shader;
-		Model* m_model;
+		/*Shader* m_shader;
+		Model* m_model;*/
 		Camera* m_camera;
 
 	public:
@@ -27,7 +27,11 @@ namespace RenderEngineNS
 		void SetupWindow(const int& p_width, const int& p_height);
 		void Update();
 		void Render(Model* p_model, Shader* p_shader) const;
-		void Clear() const;
+		Model* LoadModel(const std::string& p_filePath);
+		Shader* LoadShader(const std::string& p_vertexShader, const std::string& p_fragmentShader);
+
+		void BeginFrame();
+		void EndFrame();
 
 		bool IsRunning();
 

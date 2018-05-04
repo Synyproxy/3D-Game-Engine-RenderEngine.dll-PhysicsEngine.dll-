@@ -1,10 +1,11 @@
 #pragma once
 
 #include "stdafx.h"
+#include <RenderEngineAPI.h>
 
 namespace RenderEngineNS
 {
-	class Shader
+	class RENDERENGINE_API Shader
 	{
 	private:
 		std::string m_filePathVertex;
@@ -14,6 +15,7 @@ namespace RenderEngineNS
 		std::unordered_map<std::string, int> m_uniformLocationCache;
 
 	public:
+		Shader() = default;
 		Shader(const std::string& vertexShader, const std::string& fragmentShader);
 		~Shader();
 

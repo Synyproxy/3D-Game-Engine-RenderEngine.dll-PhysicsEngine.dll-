@@ -17,6 +17,8 @@ namespace CoreEngineNS
 		std::unique_ptr<RenderEngine> m_renderEngine;
 		Scene m_scene;
 		bool m_isRunning;
+		Model* m_model;
+		Shader* m_shader;
 
 	public:
 		CoreEngine();
