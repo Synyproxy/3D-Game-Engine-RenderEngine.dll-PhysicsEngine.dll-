@@ -12,21 +12,6 @@ Transform::~Transform()
 {
 }
 
-void Transform::Awake()
-{
-
-}
-
-void Transform::Update()
-{
-
-}
-
-void Transform::Draw()
-{
-
-}
-
 const glm::vec3& Transform::GetPosition() const
 {
 	return m_position;

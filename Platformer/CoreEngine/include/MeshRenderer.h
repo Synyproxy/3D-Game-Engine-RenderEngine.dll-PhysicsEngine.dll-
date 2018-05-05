@@ -16,10 +16,6 @@ namespace CoreEngineNS
 		MeshRenderer();
 		~MeshRenderer();
 
-		void Awake() override;
-		void Update() override;
-		void Draw() override;
-
 		void SetMesh(Model* p_model);
 		Model* GetMesh();
 	};

@@ -169,8 +169,10 @@
     <ClInclude Include="include\GameObject.h" />
     <ClInclude Include="include\Input.h" />
     <ClInclude Include="include\MeshRenderer.h" />
+    <ClInclude Include="include\Player.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\Scene.h" />
+    <ClInclude Include="include\ShaderCore.h" />
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -180,8 +182,10 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="src\Input.cpp" />
     <ClCompile Include="src\MeshRenderer.cpp" />
+    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
     <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\ShaderCore.cpp" />
     <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

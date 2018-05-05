@@ -16,10 +16,6 @@ namespace CoreEngineNS
 		Transform();
 		~Transform();
 
-		void Awake() override;
-		void Update() override;
-		void Draw() override;
-
 		const glm::vec3& GetPosition() const;
 		const glm::vec3& GetScale() const;
 

@@ -17,8 +17,8 @@ namespace CoreEngineNS
 	private:
 		std::unique_ptr<RenderEngine> m_renderEngine;
 		Scene m_scene;
+		std::vector<std::shared_ptr<GameObject>> m_sceneHierarchy;
 		bool m_isRunning;
-		Shader* m_shader;
 		ResourceManager m_resManager;
 
 	public:

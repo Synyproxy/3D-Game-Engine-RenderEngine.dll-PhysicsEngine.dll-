@@ -21,12 +21,14 @@ namespace CoreEngineNS
 
 		~GameObject() {}
 
-		void Update()
+		virtual void Awake(){}
+
+		virtual void Update()
 		{
 			for (auto& c : m_components) c->Update();
 		}
 
-		void Draw()
+		virtual void Draw()
 		{
 			for (auto& c : m_components) c->Draw();
 		}
