@@ -15,11 +15,13 @@ namespace RenderEngineNS
 		int m_height;
 		float m_time;
 
-		Camera* m_camera;
+		
 
 	public:
 		RenderEngine();
 		~RenderEngine();
+
+		Camera* m_camera;
 
 		void SetupWindow(const int& p_width, const int& p_height);
 		void Update();

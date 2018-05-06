@@ -29,8 +29,6 @@ CoreEngineNS::Input::~Input()
 
 void Input::KeyCallBack(GLFWwindow* p_window, int p_key, int p_scanCode, int p_action, int p_mods)
 {
-	
-
 	if (p_action == GLFW_PRESS)
 	{
 		if (p_key == GLFW_KEY_ESCAPE)

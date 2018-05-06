@@ -1,6 +1,8 @@
 #pragma once
 #include "stdafx.h"
 
+#include "RenderEngineAPI.h"
+
 namespace RenderEngineNS
 {
 	enum Camera_Movement
@@ -15,11 +17,11 @@ namespace RenderEngineNS
 	const float YAW = -90.0f;
 	const float PITCH = 0.0f;
 	const float SPEED = 2.5f;
-	const float SENSITIVITY = 0.1f;
+	const float SENSITIVITY = 0.3f;
 	const float ZOOM = 45.0f;
 
 	// An abstract camera class that processes input and calculates the corresponding Euler Angles, Vectors and Matrices for use in OpenGL
-	class Camera
+	class RENDERENGINE_API Camera
 	{
 	private:
 		// Camera Attributes
@@ -73,8 +75,8 @@ namespace RenderEngineNS
 		void SetRight(const glm::vec3& p_right) { m_right = p_right; }
 		const glm::vec3& GetWorldUp() const { return m_worldUp; }
 		void SetWorldUp(const glm::vec3& p_worldUp) { m_worldUp = p_worldUp; }
-		float GetYaw() const { return m_yaw; }
-		void SetYaw(const float p_yaw) { m_yaw = p_yaw; }
+		float GetYaw() const { return m_yaw;  }
+		void SetYaw(const float p_yaw) { m_yaw = p_yaw;}
 		float GetPitch() const { return m_pitch; }
 		void SetPitch(const float p_pitch) { m_pitch = p_pitch; }
 		float GetMovementSpeed() const { return m_movementSpeed; }
@@ -84,6 +86,7 @@ namespace RenderEngineNS
 		float GetZoom() const { return m_zoom; }
 		void SetZoom(const float p_zoom) { m_zoom = p_zoom; }
 
+		
 	private:
 		// Calculates the front vector from the Camera's (updated) Euler Angles
 		void UpdateCameraVectors();

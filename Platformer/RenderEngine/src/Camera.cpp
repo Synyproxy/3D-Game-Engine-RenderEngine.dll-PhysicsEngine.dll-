@@ -56,11 +56,13 @@ void Camera::ProcessKeyboard(const Camera_Movement p_direction, const float p_de
 
 void Camera::ProcessMouseMovement(float p_xoffset, float p_yoffset, const GLboolean p_constrainPitch)
 {
-	p_xoffset *= m_mouseSensitivity;
-	p_yoffset *= m_mouseSensitivity;
+	//p_xoffset *= m_mouseSensitivity;
+	//p_yoffset *= m_mouseSensitivity;
 
 	m_yaw += p_xoffset;
 	m_pitch += p_yoffset;
+
+	std::cout << m_yaw << std::endl;
 
 	// Make sure that when pitch is out of bounds, screen doesn't get flipped
 	if (p_constrainPitch)
