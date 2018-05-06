@@ -15,7 +15,7 @@ void Player::Awake()
 	std::cout << "Player Alive" << std::endl;
 	transform = &this->GetComponent<Transform>();
 	m_movementSpeed = 0.2f;
-	transform->SetPosition(glm::vec3(0, 0, 0));
+	transform->SetPosition(glm::vec3(0, 0, -10));
 }
 
 void Player::Update()
