@@ -11,13 +11,10 @@ namespace RenderEngineNS
 	{
 	private:
 		std::shared_ptr<Window> m_window;
-		bool m_isRunning;
 		int m_width;
 		int m_height;
 		float m_time;
 
-		/*Shader* m_shader;
-		Model* m_model;*/
 		Camera* m_camera;
 
 	public:
@@ -32,8 +29,6 @@ namespace RenderEngineNS
 
 		void BeginFrame();
 		void EndFrame();
-
-		bool IsRunning();
 
 		std::shared_ptr<Window> GetWindow();
 		int WindowWidth() const;

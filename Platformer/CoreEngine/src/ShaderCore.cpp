@@ -11,21 +11,6 @@ ShaderCore::ShaderCore()
 ShaderCore::~ShaderCore()
 {
 }
-//
-//void ShaderCore::Awake()
-//{
-//
-//}
-//
-//void ShaderCore::Update()
-//{
-//
-//}
-//
-//void ShaderCore::Draw()
-//{
-//
-//}
 
 void ShaderCore::SetShader(Shader* p_shader)
 {
