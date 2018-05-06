@@ -20,6 +20,9 @@ namespace CoreEngineNS
 		const glm::vec3& GetScale() const;
 
 		void SetPosition(const glm::vec3& p_position);
+		void SetPositionX(const float& p_x);
+		void SetPositionY(const float& p_y);
+		void SetPositionZ(const float& p_z);
 		void SetScale(const glm::vec3& p_scale);
 	};
 
