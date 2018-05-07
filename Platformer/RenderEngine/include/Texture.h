@@ -10,7 +10,6 @@ namespace RenderEngineNS
 		std::string m_type;
 		aiString m_path;
 
-
 		Texture(const unsigned p_id, const std::string& p_type, const aiString& p_path)
 			: m_id(p_id),
 			m_type(p_type),
