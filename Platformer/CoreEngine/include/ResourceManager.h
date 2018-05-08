@@ -11,7 +11,7 @@ namespace CoreEngineNS
 	class ResourceManager
 	{
 	public:
-		static ResourceManager& Instace();
+		static ResourceManager& Instance();
 
 	private:
 		ResourceManager();

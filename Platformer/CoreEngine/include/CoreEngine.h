@@ -8,6 +8,8 @@
 #include <Scene.h>
 #include <ResourceManager.h>	//Singleton
 
+#include "vld.h"
+
 using namespace RenderEngineNS;
 
 namespace CoreEngineNS

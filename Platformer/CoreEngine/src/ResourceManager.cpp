@@ -4,11 +4,12 @@
 
 using namespace CoreEngineNS;
 
-ResourceManager& ResourceManager::Instace()
+ResourceManager& ResourceManager::Instance()
 {
 	static ResourceManager instance;
 	return instance;
 }
+
 
 ResourceManager::ResourceManager() : m_modelsRootDir {"res/meshes/"}, m_shaderRootDir {"res/shaders/"}
 {
@@ -16,8 +17,18 @@ ResourceManager::ResourceManager() : m_modelsRootDir {"res/meshes/"}, m_shaderRo
 
 void ResourceManager::FreeResources()
 {
-	m_modelResources.clear();
-	m_shaderResources.clear();
+
+	//m_modelResources.clear();
+	//m_shaderResources.clear();
+
+	for (auto& modelPair : m_modelResources)
+		delete modelPair.second;
+
+
+	for (auto& shaderPair : m_shaderResources)
+		delete shaderPair.second;
+
+	std::cout << "Called" << std::endl;;
 }
 
 Model* ResourceManager::LoadModel(const std::string && p_name, const std::string && p_file, bool p_forceReload)
@@ -25,6 +36,9 @@ Model* ResourceManager::LoadModel(const std::string && p_name, const std::string
 	if (!p_forceReload && m_modelResources.find(p_name) != m_modelResources.end())
 		return m_modelResources[p_name];
 
+	/*Model* model = new Model(m_modelsRootDir + p_file);
+	m_modelResources.emplace(p_name, model);
+	return model;*/
 	auto res = m_modelResources.emplace(p_name, new Model(m_modelsRootDir + p_file));
 	return res.first->second;
 }
