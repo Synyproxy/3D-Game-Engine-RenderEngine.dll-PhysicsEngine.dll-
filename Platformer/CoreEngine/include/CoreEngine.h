@@ -6,11 +6,11 @@
 #include <GameObject.h>
 #include <Transform.h>
 #include <Scene.h>
-#include <ResourceManager.h>	//Singleton
-
-#include "vld.h"
+#include <ResourceManager.h>	//Singleto
+#include <PhysicsEngine.h>
 
 using namespace RenderEngineNS;
+using namespace PhysicsEngineNS;
 
 namespace CoreEngineNS
 {
@@ -21,6 +21,7 @@ namespace CoreEngineNS
 		Scene m_scene;
 		std::vector<std::shared_ptr<GameObject>> m_sceneHierarchy;
 		bool m_isRunning;
+		PhysicsEngine pEngine;
 
 	public:
 		CoreEngine();

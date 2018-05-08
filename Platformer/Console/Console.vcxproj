@@ -72,25 +72,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)PhysicsEngine;$(SolutionDir)PhysicsEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
     <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)PhysicsEngine;$(SolutionDir)PhysicsEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
     <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)PhysicsEngine;$(SolutionDir)PhysicsEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
     <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir);$(ProjectDir)include;$(SolutionDir)CoreEngine;$(SolutionDir)CoreEngine\include;$(SolutionDir)RenderEngine;$(SolutionDir)RenderEngine\include;$(SolutionDir)PhysicsEngine;$(SolutionDir)PhysicsEngine\include;$(SolutionDir)dependencies/GLEW/include;$(SolutionDir)dependencies/GLFW/WIN64/include;$(SolutionDir)dependencies\Soil\WIN64\include;$(SolutionDir)dependencies\glm;$(SolutionDir)dependencies\ASSIMP\include;$(SolutionDir)dependencies\Other;$(IncludePath)</IncludePath>
     <SourcePath>$(ProjectDir)src;$(SourcePath)</SourcePath>
     <LibraryPath>$(OutDir);$(SolutionDir)\dependencies\GLEW\lib\Release\Win$(PlatformArchitecture);$(SolutionDir)\dependencies\GLFW\WIN64\lib;$(SolutionDir)\dependencies\Soil\WIN64\lib;$(SolutionDir)dependencies\ASSIMP\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>

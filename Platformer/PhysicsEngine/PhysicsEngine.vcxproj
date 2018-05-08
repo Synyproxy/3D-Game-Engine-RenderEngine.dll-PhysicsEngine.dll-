@@ -162,6 +162,7 @@
     <ClInclude Include="include\PhysicsEngine.h" />
     <ClInclude Include="include\PhysicsEngineAPI.h" />
     <ClInclude Include="include\Primitive.h" />
+    <ClInclude Include="include\Sphere.h" />
     <ClInclude Include="include\Utils.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="src\PhysicsEngine.cpp" />
     <ClCompile Include="src\Primitive.cpp" />
+    <ClCompile Include="src\Sphere.cpp" />
     <ClCompile Include="src\Utils.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

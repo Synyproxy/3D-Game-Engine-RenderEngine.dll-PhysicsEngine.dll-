@@ -10,7 +10,7 @@ namespace CoreEngineNS
 	class ShaderCore : public Component
 	{
 	private:
-		Shader * m_shader;
+		Shader* m_shader;
 
 	public:
 		ShaderCore();
